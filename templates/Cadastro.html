@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {# Links Google #}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/estilo.css">
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+</head>
+<body>
+{# --- NAV --- #}
+<section class="Nav">
+    <a href="/" class="Logo">
+        <img class="IconLogo" src="./static/IconPsco.png">
+        <p class="TextoNav"><strong>Espaço Psicologia</strong></p>
+    </a>
+    <div class="Rotas">
+        <a class="TextoNav" href="/importancia">Importância</a>
+        <a class="TextoNav" href="/cadastro">Cadastro Pacientes</a>
+        <a class="TextoNav" href="/exibir">Pacientes Cadastrados</a>
+    </div>
+</section>
+
+{# --- FORMULÁRIO --- #}
+<section class="Form">
+    <h4 class="Subtitulo">Cadastrar Novo Paciente</h4>
+    <form class="Formulario" method="post" action="/criar">
+        <fieldset style="border: none">
+          <div class="Formu">
+              <div class="Input">
+                <label class="Texto" for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" class="InserirInput">
+              </div>
+              <div class="Input">
+                <label class="Texto" for="idade">Idade</label>
+                <input type="number" id="idade" name="idade" class="InserirInput">
+              </div>
+
+              <div class="Input">
+                <label class="Texto" for="genero">Genero</label>
+                <select id="genero" name="genero" required>
+                  <option value="" selected hidden>Selecione uma opção</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
+              </div>
+
+              <div class="Input">
+                <label class="Texto" for="dataCons">Data da Consulta</label>
+                <input type="text" id="dataCons" name="dataCons" class="InserirInput">
+              </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <button class="Btn" type="submit">Cadastrar Paciente</button>
+          </div>
+        </fieldset>
+    </form>
+</section>
+
+{# --- RODAPÉ --- #}
+<footer class="Rodape">
+    <p class="TextRodape">Feitor por: <em>Karoline Moraes</em></p>
+</footer>
+
+</body>
+</html>
